@@ -8,9 +8,11 @@ The purpose of this project is to develop a device that can
 interpret emotion in real-time via a camera and communicate those 
 emotions with the user. The device is aimed at users who have 
 trouble recognising facial expressions. 
+
 Baseline:
 - The device recognises two emotions, e.g., happy/sad, with a delay.
 - Sends the emotion as text to the user via a web app.
+
 Depending on time constraints:
 - Communicate emotions to user via Bluetooth earphones.
 - Be "discreetly" mounted in a hat.
