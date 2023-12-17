@@ -20,6 +20,9 @@ Depending on time constraints:
 - Web app will show the emotion as an emoticon and in text.
 - Use IoT platform such as ThingSpeak
 
+![howitworkswithtext](https://github.com/MartyRath/raspberry-pi-emotion-recognition/assets/91559109/6bb6e446-de80-48fb-90ec-e501bee1d25d)
+
+
 Tools, Technologies, and Equipment
 Hardware
 - Processing: Raspberry Pi 4 Model B
