@@ -47,6 +47,8 @@ while True:
     # Iterates through detected face coordinates
     for (x,y,w,h) in faces:
         # print("Face detected!")
+        # Draws rectangle around face
+        cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
         # Extracts face (grayscale)
         face_gray=gray[y:y+h,x:x+w]
         # Resizes grayscale face to 48x48 as this is size tflite model was trained on. Interpolation maintains 
@@ -69,9 +71,16 @@ while True:
 
         # Assigns the highest value/most probable emotion from class_lables based on emotion_prediction
         emotion_label=class_labels[emotion_prediction.argmax()]
+        # To display emotion_label onscreen at x and y
+        emotion_label_position=(x,y)
+        # To put text of emotion onscreen
+        cv2.putText(frame,emotion_label,emotion_label_position,cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,0),2)
 
         # Prints the emotion only if it has changed from the last detection
         if emotion_label != last_emotion:
             print(emotion_label)
             last_emotion = emotion_label
+    # To open video window
+    #cv2.imshow('Emotion Detector', frame)
 video.release()
+#cv2.destroyAllWindows()
