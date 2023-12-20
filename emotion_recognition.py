@@ -1,8 +1,10 @@
 """
-Realtime prediction of emotion using pre-trained models via webcam feed.
-Models:
-Haar Cascade Classifier from OpenCV to detect faces.
-TensorFlow Lite model trained from Kaggle images to predict emotions.
+Live prediction of emotion using pre-trained models. 
+Uses Haar Cascade Classifiers to detect face,
+then, uses pre-trained model for emotion to predict them from 
+webcam video feed.
+
+Prediction is done using tflite model.
 
 """
 import tensorflow as tf
@@ -22,7 +24,7 @@ emotion_interpreter.allocate_tensors()
 emotion_input_details = emotion_interpreter.get_input_details()
 emotion_output_details = emotion_interpreter.get_output_details()
 
-# Emotion labels to match what emotions TensorFlow Lite model was trained on.
+# Emotion labels to match what emotions model was trained on 
 class_labels=['Angry','Disgust', 'Fear', 'Happy','Neutral','Sad','Surprise']
 
 # Captures video feed from the default webcam
@@ -71,13 +73,16 @@ while True:
         # To put text of emotion onscreen
         cv2.putText(frame,emotion_label,emotion_label_position,cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,0),2)
 
-        # Initialise variable to store last detected emotion
+        # Initialize variable to store last detected emotion
         last_emotion = None
-        # Prints the emotion only if it has changed from the last detection
+        # Print the emotion only if it has changed from the last detection
         if emotion_label != last_emotion:
             print(emotion_label)
-            last_emotion = emotion_label
+            last_emotion = emotion_label  
     # To open video window
     cv2.imshow('Emotion Detector', frame)
 video.release()
 cv2.destroyAllWindows()
+
+
+##############################
