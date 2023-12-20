@@ -1,10 +1,8 @@
 """
-Live prediction of emotion using pre-trained models. 
-Uses Haar Cascade Classifiers to detect face,
-then, uses pre-trained model for emotion to predict them from 
-webcam video feed.
-
-Prediction is done using tflite model.
+Realtime prediction of emotion using pre-trained models via webcam feed.
+Models:
+Haar Cascade Classifier from OpenCV to detect faces.
+TensorFlow Lite model trained from Kaggle images to predict emotions.
 
 """
 import tensorflow as tf
@@ -24,38 +22,43 @@ emotion_interpreter.allocate_tensors()
 emotion_input_details = emotion_interpreter.get_input_details()
 emotion_output_details = emotion_interpreter.get_output_details()
 
-# Emotion labels to match what emotions model was trained on 
+# Emotion labels to match what emotions TensorFlow Lite model was trained on.
 class_labels=['Angry','Disgust', 'Fear', 'Happy','Neutral','Sad','Surprise']
 
 # Captures video feed from the default webcam
 video=cv2.VideoCapture(0)
 
+# Initialise variable to store last detected emotion
+last_emotion = None
+
 # Loops continuously to process video frames and predict emotions
 while True:
 
-    # .read() returns a boolean indicating if the frame was successfully read, and of the current frame, 
-    # e.g.(True, current_frame), so ret=True, frame=current_frame
+    # .read() returns a boolean indicating if the frame was successfully read, and reads the current frame, 
+    # e.g.(True, current_frame)
     ret,frame=video.read()
     
     # Converts frame to grayscale to improve face detection
     gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-    # face_classifier searches for faces in gray using the Haar Cascade classifier and outputs face coordinates
+    # Uses Haar Cascade classifier to detect faces and outputs coordinates of detected face.
     # detectMultiScale allows detection at different scales, e.g. a face that is closer or further away
     faces=face_classifier.detectMultiScale(gray,1.3,5)
 
     # Iterates through detected face coordinates
     for (x,y,w,h) in faces:
+        # print("Face detected!")
         # Draws rectangle around face
         cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
         # Extracts face (grayscale)
         face_gray=gray[y:y+h,x:x+w]
-        # Resizes gray face to 48x48 as this is size tflite model was trained on. Interpolation to maintain quality of image
+        # Resizes grayscale face to 48x48 as this is size tflite model was trained on. Interpolation maintains 
+        # quality of image from resize
         face_gray=cv2.resize(face_gray,(48,48),interpolation=cv2.INTER_AREA)
 
         # Pre-processing detected face for tflite model prediction.
         face=face_gray.astype('float')/255.0  # Normalises data from [0, 255] to [0, 1]
         face=img_to_array(face) # Converts face to NumPy array
-        # expand_dims() is used to expand the dimensions of an array or tensor, i.e. face.
+        # Expands the dimensions of array or tensor, i.e. face.
         # axis=0 adds a dimension to face, from a 2D frame of 48x48, to 3D 1x48x48.
         face=np.expand_dims(face,axis=0)
         
@@ -73,16 +76,11 @@ while True:
         # To put text of emotion onscreen
         cv2.putText(frame,emotion_label,emotion_label_position,cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,0),2)
 
-        # Initialize variable to store last detected emotion
-        last_emotion = None
-        # Print the emotion only if it has changed from the last detection
+        # Prints the emotion only if it has changed from the last detection
         if emotion_label != last_emotion:
             print(emotion_label)
-            last_emotion = emotion_label  
+            last_emotion = emotion_label
     # To open video window
     cv2.imshow('Emotion Detector', frame)
 video.release()
 cv2.destroyAllWindows()
-
-
-##############################
