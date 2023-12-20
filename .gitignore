@@ -1,0 +1,2 @@
+# Exclude TensorFlow directory
+tensorflow/

@@ -62,7 +62,7 @@ while True:
         emotion_label=class_labels[emotion_preds.argmax()]  #Find the label
         emotion_label_position=(x,y)
         cv2.putText(frame,emotion_label,emotion_label_position,cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,0),2)
-    
+        print(emotion_label)    
     
     cv2.imshow('Emotion Detector', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):  #Press q to exit
