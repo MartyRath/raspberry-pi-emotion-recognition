@@ -18,7 +18,7 @@ def v3_write_handler(value):
         print("Starting...")
         os.system("python3 emotion_recognition_blynk.py &")
     else:
-        print("Stopping emotion_recognition.py...")
+        print("Stopping emotion_recognition_blynk.py...")
         os.system("pkill -f 'python3 emotion_recognition_blynk.py'")
 
 # infinite loop that waits for event

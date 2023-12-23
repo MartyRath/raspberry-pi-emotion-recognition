@@ -10,6 +10,12 @@ from keras.preprocessing.image import img_to_array
 import cv2
 import numpy as np
 
+import BlynkLib
+
+BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
+# initialize Blynk
+blynk = BlynkLib.Blynk(BLYNK_AUTH)
+
 # Initialise Haar Cascade classifier for face detection
 face_classifier=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -74,28 +80,19 @@ while True:
         if emotion_label != last_emotion:
             print(emotion_label)
             last_emotion = emotion_label
+            # As Blynk widget needs a number, dictionary to correspond emotion to number
+            emotion_to_number = {
+            'Angry': 0,
+            'Disgust': 1,
+            'Fear': 2,
+            'Happy': 3,
+            'Neutral': 4,
+            'Sad': 5,
+            'Surprise': 6
+            }
+            emotion_number = emotion_to_number[emotion_label]
+            blynk.run()
+            blynk.virtual_write(1, emotion_number)
 video.release()
 
-#####Writing emotions to be visualised on Blynk####################
-import BlynkLib
-
-BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
-# initialize Blynk
-blynk = BlynkLib.Blynk(BLYNK_AUTH)
-
-# As Blynk widget needs a number, dictionary to correspond emotion to number
-emotion_to_number = {
-    'Angry': 0,
-    'Disgust': 1,
-    'Fear': 2,
-    'Happy': 3,
-    'Neutral': 4,
-    'Sad': 5,
-    'Surprise': 6
-}
-
-emotion_number = emotion_to_number[emotion_label]
-
-while True:
-    blynk.run()
-    blynk.virtual_write(1, emotion_number)
+##### Writing emotions to be visualised on Blynk ####################
