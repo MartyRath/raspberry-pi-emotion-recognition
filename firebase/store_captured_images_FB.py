@@ -14,11 +14,5 @@ bucket = storage.bucket()
 captured_images = '../captured_images'
 
 # Function returns list of current image filenames 
-def get_image_filenames(captured_images):
-    image_filenames = []
-    for filename in os.listdir(captured_images):
-        image_filenames.append(filename)
-        print(image_filenames)
-    return image_filenames
-
-get_image_filenames(captured_images)
+image_filenames = os.listdir(captured_images)
+print(image_filenames)
