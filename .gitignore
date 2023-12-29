@@ -3,3 +3,6 @@ tensorflow/
 
 # Exclude captured_images folder
 captured_images/
+
+# Exclude Firebase key
+firebase/serviceAccountKey.json
