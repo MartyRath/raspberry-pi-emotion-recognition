@@ -1,2 +1,5 @@
 # Exclude TensorFlow directory
 tensorflow/
+
+# Exclude captured_images folder
+captured_images/
