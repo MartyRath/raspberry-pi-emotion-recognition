@@ -78,7 +78,7 @@ while True:
 
             # Save image when emotion changes
             image_filename = f"captured_images/{emotion_label}_{image_count}.jpg"
-            cv2.imwrite(image_filename, frame)
+            cv2.imwrite(image_filename, face)
             print(f"Image saved as {image_filename}")
             image_count += 1
 video.release()

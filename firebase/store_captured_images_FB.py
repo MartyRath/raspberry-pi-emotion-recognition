@@ -25,4 +25,4 @@ for filename in image_filenames:
         blob.upload_from_filename(os.path.join(captured_images_path, filename))
         print(f"Uploaded {filename} to Firebase Storage")
 
-print ("Firebase up-to-date")
+print ("Firebase storage is up-to-date")
