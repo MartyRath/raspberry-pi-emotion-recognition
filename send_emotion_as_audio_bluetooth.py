@@ -3,7 +3,7 @@ import time
 import pygame
 import os
 
-# Initialise pygame
+# Initialise pygame to play audio
 pygame.init()
 
 emotion_text = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
@@ -14,7 +14,7 @@ emotion_text_to_audio = {
     'Disgust': os.path.join('audio', 'disgust.mp3'),
     'Fear': os.path.join('audio', 'fear.mp3'),
     'Happy': os.path.join('audio', 'happy.mp3'),
-    'Neutral': os.path.join('audio', 'sad.mp3'),
+    'Neutral': os.path.join('audio', 'neutral.mp3'),
     'Sad': os.path.join('audio', 'sad.mp3'),
     'Surprise': os.path.join('audio', 'surprise.mp3')
 }
