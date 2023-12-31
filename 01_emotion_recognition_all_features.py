@@ -12,17 +12,16 @@ import numpy as np
 import BlynkLib
 
 import time
-import pygame
 import os
+
+from pydub import AudioSegment
+from pydub.playback import play
 
 BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
 # initialize Blynk
 blynk = BlynkLib.Blynk(BLYNK_AUTH)
 
-# Workaround to get pygame to work headless
-os.putenv('SDL_VIDEODRIVER', 'fbcon')
-# Initialise pygame to play audio
-pygame.init()
+
 
 # Initialise Haar Cascade classifier for face detection
 face_classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -126,11 +125,9 @@ while True:
 
                 emotion_audio = emotion_text_to_audio[emotion_label]
 
-                audio = pygame.mixer.Sound(emotion_audio)
-                audio.play()
+                audio = AudioSegment.from_file(emotion_audio)
+                play(audio)
 
-                while pygame.mixer.get_busy():
-                    pygame.time.Clock().tick(10)
 
     # Run Blynk
     blynk.run()

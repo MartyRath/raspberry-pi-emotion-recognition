@@ -21,3 +21,135 @@ Traceback (most recent call last):
     audio = pygame.mixer.Sound(emotion_audio)
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 pygame.error: mixer not initialized
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ for Python v1.0.0 (linux)
+
+pygame 2.5.2 (SDL 2.28.3, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Connecting to blynk.cloud:443...
+Current button value: 0
+Stopping emotion recognition...
+Current button value: 1
+Starting emotion recognition
+Neutral
+Image saved as captured_images/Neutral_0.jpg
+Traceback (most recent call last):
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 129, in <module>
+    audio = pygame.mixer.Sound(emotion_audio)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pygame.error: mixer not initialized
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ for Python v1.0.0 (linux)
+
+pygame 2.5.2 (SDL 2.28.3, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Connecting to blynk.cloud:443...
+Happy
+Image saved as captured_images/Happy_0.jpg
+Traceback (most recent call last):
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 129, in <module>
+    audio = pygame.mixer.Sound(emotion_audio)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pygame.error: mixer not initialized
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmp6mi9ufmh.wav':
+  Duration: 00:00:01.88, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmp6mi9ufmh.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmpskibwvsr.wav':
+  Duration: 00:00:01.65, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpskibwvsr.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmp6opepb4b.wav':
+  Duration: 00:00:01.93, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmp6opepb4b.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmp47j3xu7c.wav':
+  Duration: 00:00:01.86, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmp47j3xu7c.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmpb_5mmu_o.wav':
+  Duration: 00:00:01.93, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpb_5mmu_o.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmpnrnoj6x4.wav':
+  Duration: 00:00:01.86, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpnrnoj6x4.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmpbttb18bc.wav':
+  Duration: 00:00:01.93, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpbttb18bc.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmpyiixdnl2.wav':
+  Duration: 00:00:01.86, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpyiixdnl2.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmppml_ttr4.wav':
+  Duration: 00:00:01.93, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmppml_ttr4.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmpuo4fez1s.wav':
+  Duration: 00:00:01.86, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpuo4fez1s.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmpc_97xnnh.wav':
+  Duration: 00:00:01.93, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmpc_97xnnh.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmp22buekdw.wav':
+  Duration: 00:00:01.88, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmp22buekdw.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmplnuq6pky.wav':
+  Duration: 00:00:01.93, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmplnuq6pky.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
