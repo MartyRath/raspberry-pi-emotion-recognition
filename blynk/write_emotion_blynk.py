@@ -1,13 +1,6 @@
-import BlynkLib
 from time import sleep
 import os
-
-# Change the working directory to where emotion_recognition.py is
-os.chdir('../')
-
-BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
-# Initialise Blynk
-blynk = BlynkLib.Blynk(BLYNK_AUTH)
+from blynk_setup import blynk, run_blynk
 
 # register handler for virtual pin V0 write event
 @blynk.on("V0")
@@ -23,5 +16,5 @@ def write_handler(value):
 
 # infinite loop that waits for event
 while True:
-    blynk.run()
+    run_blynk()
     sleep(.5)
