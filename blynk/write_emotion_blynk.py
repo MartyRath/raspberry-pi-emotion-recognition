@@ -15,11 +15,11 @@ def v3_write_handler(value):
     buttonValue=value[0]
     print(f'Current button value: {buttonValue}')
     if buttonValue=="1":
-        print("Starting...")
-        os.system("python3 emotion_recognition_blynk.py &")
+        print("Starting emotion_recognition_all_features.py")
+        os.system("python3 emotion_recognition_all_features.py &")
     else:
-        print("Stopping emotion_recognition_blynk.py...")
-        os.system("pkill -f 'python3 emotion_recognition_blynk.py'")
+        print("Stopping emotion_recognition_all_features.py...")
+        os.system("pkill -f 'python3 emotion_recognition_all_features.py'")
 
 # infinite loop that waits for event
 while True:
