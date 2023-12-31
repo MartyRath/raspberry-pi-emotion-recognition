@@ -19,6 +19,8 @@ BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
 # initialize Blynk
 blynk = BlynkLib.Blynk(BLYNK_AUTH)
 
+# Workaround to get pygame to work headless
+os.putenv('SDL_VIDEODRIVER', 'fbcon')
 # Initialise pygame to play audio
 pygame.init()
 

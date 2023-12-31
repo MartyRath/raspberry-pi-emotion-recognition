@@ -1,0 +1,23 @@
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ for Python v1.0.0 (linux)
+
+pygame 2.5.2 (SDL 2.28.3, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Connecting to blynk.cloud:443...
+Current button value: 0
+Stopping emotion recognition...
+Current button value: 1
+Starting emotion recognition
+Happy
+Image saved as captured_images/Happy_0.jpg
+Traceback (most recent call last):
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 127, in <module>
+    audio = pygame.mixer.Sound(emotion_audio)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pygame.error: mixer not initialized
