@@ -135,3 +135,5 @@ while True:
                 # Checks if audio still playing every 10 frames
                 pygame.time.Clock().tick(10)
 video.release()
+pygame.mixer.stop()
+cv2.destroyAllWindows()
