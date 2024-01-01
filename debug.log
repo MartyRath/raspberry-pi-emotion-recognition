@@ -1,1 +1,12 @@
-This is a test message
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Connection failure: Connection refused
+pa_context_connect() failed: Connection refused
+Connection failure: Connection refused
+pa_context_connect() failed: Connection refused
+Connection failure: Connection refused
+pa_context_connect() failed: Connection refused
+Connection failure: Connection refused
+pa_context_connect() failed: Connection refused
+Connection failure: Connection refused
+pa_context_connect() failed: Connection refused
+Terminated

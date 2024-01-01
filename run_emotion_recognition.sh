@@ -2,6 +2,10 @@
 # This navigates to emotion recogntion project directory, starts virtual environment
 # and then starts emotion recognition.
 
+# Clear log file
+> /home/marty/assignment/raspberry-pi-emotion-recognition/debug.log
+
+
 # Redirect output to a log file to debug
 exec &>> /home/marty/assignment/raspberry-pi-emotion-recognition/debug.log
 
@@ -19,6 +23,9 @@ echo "Bluetooth connected"
 bluetooth_index=$(pactl list short sinks | grep "bluez" | awk '{print $1}')
 # Sets default audio sink by index from list
 pactl set-default-sink $bluetooth_index
+
+# Redirect output to a log file to debug
+exec &>> /home/marty/assignment/raspberry-pi-emotion-recognition/debug.log
 
 cd /home/marty/assignment/raspberry-pi-emotion-recognition
 

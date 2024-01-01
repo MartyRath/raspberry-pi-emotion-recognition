@@ -10,12 +10,9 @@ from keras.preprocessing.image import img_to_array
 import cv2
 import numpy as np
 import BlynkLib
-
 import time
 import os
-
-from pydub import AudioSegment
-from pydub.playback import play
+import subprocess
 
 BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
 # initialize Blynk
@@ -122,9 +119,7 @@ while True:
                 }
 
                 emotion_audio = emotion_text_to_audio[emotion_label]
-
-                audio = AudioSegment.from_file(emotion_audio)
-                play(audio)
+                subprocess.run(['paplay', emotion_audio])
 
 
     # Run Blynk
