@@ -21,8 +21,6 @@ BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
 # initialize Blynk
 blynk = BlynkLib.Blynk(BLYNK_AUTH)
 
-
-
 # Initialise Haar Cascade classifier for face detection
 face_classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
