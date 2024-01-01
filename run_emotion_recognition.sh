@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Clear contents of the debug.log file
+> /home/marty/assignment/raspberry-pi-emotion-recognition/debug.log
+
 # Redirect output to a log file to debug
 exec &>> /home/marty/assignment/raspberry-pi-emotion-recognition/debug.log
 

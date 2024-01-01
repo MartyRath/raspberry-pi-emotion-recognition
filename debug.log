@@ -153,3 +153,43 @@ SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown 
 No more combinations to try, audio open failed
 Failed to open file '/tmp/tmplnuq6pky.wav' or configure filtergraph
     nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmp573t0ank.wav':
+  Duration: 00:00:01.86, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmp573t0ank.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   Input #0, wav, from '/tmp/tmp6x3xr1dz.wav':
+  Duration: 00:00:01.93, bitrate: 705 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, 1 channels, s16, 705 kb/s
+SDL_OpenAudio (1 channels, 44100 Hz): ALSA: Couldn't open audio device: Unknown error 524
+No more combinations to try, audio open failed
+Failed to open file '/tmp/tmp6x3xr1dz.wav' or configure filtergraph
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ for Python v1.0.0 (linux)
+
+Connecting to blynk.cloud:443...
+Neutral
+Image saved as captured_images/Neutral_0.jpg
+Happy
+Image saved as captured_images/Happy_1.jpg
+Traceback (most recent call last):
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 114, in <module>
+    blynk.virtual_write(1, emotion_number)
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 84, in virtual_write
+    self._send(MSG_HW, 'vw', pin, *val)
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 117, in _send
+    self._write(msg)
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 249, in _write
+    self.conn.write(data)
+  File "/usr/lib/python3.11/ssl.py", line 1153, in write
+    return self._sslobj.write(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLZeroReturnError: TLS/SSL connection has been closed (EOF) (_ssl.c:2393)
