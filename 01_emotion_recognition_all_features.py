@@ -44,7 +44,7 @@ last_emotion = None
 image_count = 0
 
 # Flag to control the emotion recognition loop
-emotion_recognition_running = True
+emotion_recognition_running = False
 
 # register handler for virtual pin V0 write event
 @blynk.on("V0")
