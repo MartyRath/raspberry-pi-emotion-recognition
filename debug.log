@@ -6,110 +6,13 @@ Device Jabra Elite Active 75t not available
 Device Jabra Elite Active 75t not available
 Device Jabra Elite Active 75t not available
 Device Jabra Elite Active 75t not available
+Device Jabra Elite Active 75t not available
+Device Jabra Elite Active 75t not available
+Device Jabra Elite Active 75t not available
+Device Jabra Elite Active 75t not available
+Device Jabra Elite Active 75t not available
+Device Jabra Elite Active 75t not available
 Bluetooth connected
 Press ON to start emotion recognition
 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-Connection failure: Connection refused
-pa_context_connect() failed: Connection refused
-
-    ___  __          __
-   / _ )/ /_ _____  / /__
-  / _  / / // / _ \/  '_/
- /____/_/\_, /_//_/_/\_\
-        /___/ for Python v1.0.0 (linux)
-
-Connecting to blynk.cloud:443...
-Current button value: 0
-Current button value: 1
-Starting emotion recognition
-Sad
-Emotion uploaded to firebase
-Image saved as captured_images/Sad_0.jpg
-Current button value: 0
-Stopping emotion recognition...
-Firebase images are up-to-date
-Current button value: 1
-Starting emotion recognition
-Current button value: 0
-Stopping emotion recognition...
-Firebase images are up-to-date
-Current button value: 1
-Starting emotion recognition
-Current button value: 0
-Stopping emotion recognition...
-Traceback (most recent call last):
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 135, in <module>
-    blynk.run()
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 264, in run
-    self.process(data)
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 197, in process
-    self.emit("V"+args[1], args[2:])
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 68, in emit
-    self._cbks[evt](*a, **kv)
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 68, in write_handler
-    upload_images_to_firebase(img_ref, bucket)
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/firebase_functions.py", line 28, in upload_images_to_firebase
-    if not blob.exists():
-           ^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 702, in exists
-    client._get_resource(
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/cloud/storage/client.py", line 387, in _get_resource
-    return self._connection.api_request(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/cloud/storage/_http.py", line 72, in api_request
-    return call()
-           ^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/api_core/retry.py", line 372, in retry_wrapped_func
-    return retry_target(
-           ^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/api_core/retry.py", line 207, in retry_target
-    result = target()
-             ^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/cloud/_http/__init__.py", line 482, in api_request
-    response = self._make_request(
-               ^^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/cloud/_http/__init__.py", line 341, in _make_request
-    return self._do_request(
-           ^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/cloud/_http/__init__.py", line 379, in _do_request
-    return self.http.request(
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/google/auth/transport/requests.py", line 541, in request
-    response = super(AuthorizedSession, self).request(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
-    resp = conn.urlopen(
-           ^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
-    response = self._make_request(
-               ^^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 536, in _make_request
-    response = conn.getresponse()
-               ^^^^^^^^^^^^^^^^^^
-  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/urllib3/connection.py", line 461, in getresponse
-    httplib_response = super().getresponse()
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/http/client.py", line 1374, in getresponse
-    response.begin()
-  File "/usr/lib/python3.11/http/client.py", line 318, in begin
-    version, status, reason = self._read_status()
-                              ^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/http/client.py", line 279, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/socket.py", line 706, in readinto
-    return self._sock.recv_into(b)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/ssl.py", line 1278, in recv_into
-    return self.read(nbytes, buffer)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/ssl.py", line 1134, in read
-    return self._sslobj.read(len, buffer)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
+Terminated
