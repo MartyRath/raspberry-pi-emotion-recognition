@@ -1,7 +1,8 @@
 # Uploads captured_images to firebase.
 import firebase_admin
-from firebase_admin import credentials, storage
+from firebase_admin import credentials, storage, db
 import os
+from datetime import datetime
 
 cred=credentials.Certificate('./serviceAccountKey.json')
 firebase_admin.initialize_app(cred, {
@@ -10,6 +11,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 bucket = storage.bucket()
+ref = db.reference('/')
 
 captured_images_path = '../captured_images'
 
@@ -24,5 +26,12 @@ for filename in image_filenames:
         # Upload the image to Firebase Storage
         blob.upload_from_filename(os.path.join(captured_images_path, filename))
         print(f"Uploaded {filename} to Firebase Storage")
+
+        current_time = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        # Push file reference to image in Realtime DB
+        ref.push({
+            'image': filename,
+            'timestamp': current_time
+        })
 
 print ("Firebase storage is up-to-date")

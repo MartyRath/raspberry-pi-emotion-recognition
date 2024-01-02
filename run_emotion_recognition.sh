@@ -19,7 +19,7 @@ while ! bluetoothctl info | grep -q "Connected: yes"; do
 done
 echo "Bluetooth connected"
 
-echo "starting emotion file"
+echo "Press ON to start emotion recognition"
 
 cd /home/marty/assignment/raspberry-pi-emotion-recognition
 
