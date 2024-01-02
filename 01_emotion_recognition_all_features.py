@@ -13,9 +13,13 @@ import BlynkLib
 import time
 import os
 import subprocess
+from firebase_functions import initialise_firebase, upload_images_to_firebase, upload_emotions_to_firebase
+
+# Initialising Firebase and references
+bucket, img_ref, emotion_ref=initialise_firebase()
 
 BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'
-# initialize Blynk
+# Initialise Blynk
 blynk = BlynkLib.Blynk(BLYNK_AUTH)
 
 # Initialise Haar Cascade classifier for face detection
@@ -60,6 +64,8 @@ def write_handler(value):
         if emotion_recognition_running:
             print("Stopping emotion recognition...")
             emotion_recognition_running = False
+            time.sleep(5)
+            upload_images_to_firebase(img_ref, bucket)
 
 # Main loop for emotion recognition
 while True:
@@ -89,6 +95,9 @@ while True:
             if emotion_label != last_emotion:
                 print(emotion_label)
                 last_emotion = emotion_label
+
+                # Saves emotion label with timestamp to Firebase Realtime database
+                upload_emotions_to_firebase(emotion_ref, emotion_label)
 
                 image_filename = f"captured_images/{emotion_label}_{image_count}.jpg"
                 cv2.imwrite(image_filename, face_gray)
