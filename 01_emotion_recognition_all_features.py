@@ -12,8 +12,9 @@ import numpy as np
 import BlynkLib
 import time
 from firebase_functions import initialise_firebase, upload_images_to_firebase, upload_emotions_to_firebase
-import os
-import subprocess
+from play_emotion_audio import play_emotion_audio
+from emotion_to_blynk_number import emotion_to_number
+
 
 # Initialising Firebase and database directory references
 bucket, img_ref, emotion_ref=initialise_firebase()
@@ -99,36 +100,18 @@ while True:
                 # Saves emotion label with timestamp to Firebase Realtime database
                 upload_emotions_to_firebase(emotion_ref, emotion_label)
 
+                # Saves processed image, face_gray, to captured_images
                 image_filename = f"captured_images/{emotion_label}_{image_count}.jpg"
                 cv2.imwrite(image_filename, face_gray)
                 print(f"Image saved as {image_filename}")
                 image_count += 1
 
-                emotion_to_number = {
-                    'Angry': 0,
-                    'Disgust': 1,
-                    'Fear': 2,
-                    'Happy': 3,
-                    'Neutral': 4,
-                    'Sad': 5,
-                    'Surprise': 6
-                }
-                emotion_number = emotion_to_number[emotion_label]
+                # Converts emotion label to number for blynk image gallery
+                emotion_number = emotion_to_number(emotion_label)
                 blynk.run()
                 blynk.virtual_write(1, emotion_number)
 
-                emotion_text_to_audio = {
-                    'Angry': os.path.join('audio', 'angry.mp3'),
-                    'Disgust': os.path.join('audio', 'disgust.mp3'),
-                    'Fear': os.path.join('audio', 'fear.mp3'),
-                    'Happy': os.path.join('audio', 'happy.mp3'),
-                    'Neutral': os.path.join('audio', 'neutral.mp3'),
-                    'Sad': os.path.join('audio', 'sad.mp3'),
-                    'Surprise': os.path.join('audio', 'surprise.mp3')
-                }
-
-                emotion_audio = emotion_text_to_audio[emotion_label]
-                subprocess.run(['paplay', emotion_audio])
+                play_emotion_audio(emotion_label)
 
 
     # Run Blynk
