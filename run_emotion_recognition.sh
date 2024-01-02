@@ -11,7 +11,7 @@ exec &>> /home/marty/assignment/raspberry-pi-emotion-recognition/debug.log
 # Fixes issue Connection failure: Connection refused pa_context_connect() failed: Connection refused
 pulseaudio --start
 
-device_name="Jabra Elite Active 75t"
+device_name="SoundCore 2"
 
 # While bluetoothctl info does not contain "Connected: yes", do...
 while ! bluetoothctl info | grep -q "Connected: yes"; do
