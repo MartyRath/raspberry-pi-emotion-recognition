@@ -120,7 +120,7 @@ while True:
 
                 # Saves processed image, face_gray, to captured_images
                 image_filename = f"captured_images/{emotion_label}_{image_count}.jpg"
-                cv2.imwrite(image_filename, face_gray)
+                cv2.imwrite(image_filename, face_gray_resized)
                 print(f"Image saved as {image_filename}")
                 image_count += 1
 
