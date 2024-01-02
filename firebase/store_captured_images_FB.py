@@ -2,7 +2,7 @@
 import firebase_admin
 from firebase_admin import credentials, storage, db
 import os
-from datetime import datetime
+import datetime
 
 cred=credentials.Certificate('./serviceAccountKey.json')
 firebase_admin.initialize_app(cred, {
@@ -11,7 +11,8 @@ firebase_admin.initialize_app(cred, {
 })
 
 bucket = storage.bucket()
-ref = db.reference('/')
+img_ref = db.reference('/images')
+emotion_ref = db.reference('/emotions')
 
 captured_images_path = '../captured_images'
 
@@ -29,9 +30,13 @@ for filename in image_filenames:
 
         current_time = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         # Push file reference to image in Realtime DB
-        ref.push({
+        img_ref.push({
             'image': filename,
             'timestamp': current_time
         })
+        emotion_ref.push({
+        'emotion': emotion_label,
+        'timestamp': current_time
+        })
 
-print ("Firebase storage is up-to-date")
+print ("Firebase is up-to-date")
