@@ -6,7 +6,7 @@ import datetime
 
 # Function to initialise Firebase
 def initialise_firebase():
-    cred = credentials.Certificate('./serviceAccountKey.json')
+    cred = credentials.Certificate('serviceAccountKey.json')
     firebase_admin.initialize_app(cred, {
         'storageBucket': 'captured-emotion-images.appspot.com',
         'databaseURL': 'https://captured-emotion-images-default-rtdb.europe-west1.firebasedatabase.app/'
