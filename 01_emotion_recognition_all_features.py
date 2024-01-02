@@ -14,7 +14,7 @@ import time
 from firebase_functions import initialise_firebase, upload_images_to_firebase, upload_emotions_to_firebase
 from play_emotion_audio import play_emotion_audio
 from emotion_to_blynk_number import emotion_to_number
-
+import os
 
 # Initialising Firebase and database directory references
 bucket, img_ref, emotion_ref=initialise_firebase()
@@ -43,7 +43,7 @@ video = cv2.VideoCapture(0)
 
 # Initialise variable to store last detected emotion, and image number
 last_emotion = None
-image_count = 0
+image_count = len(os.listdir('captured_images')) + 1
 
 # Flag to control the emotion recognition loop
 emotion_recognition_running = False
