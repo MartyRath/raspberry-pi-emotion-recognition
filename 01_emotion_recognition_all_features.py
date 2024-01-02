@@ -11,11 +11,11 @@ import cv2
 import numpy as np
 import BlynkLib
 import time
+from firebase_functions import initialise_firebase, upload_images_to_firebase, upload_emotions_to_firebase
 import os
 import subprocess
-from firebase_functions import initialise_firebase, upload_images_to_firebase, upload_emotions_to_firebase
 
-# Initialising Firebase and references
+# Initialising Firebase and database directory references
 bucket, img_ref, emotion_ref=initialise_firebase()
 
 BLYNK_AUTH = 'Hm703ShkXO-pmualjhD1E6xaWBoDwjDH'

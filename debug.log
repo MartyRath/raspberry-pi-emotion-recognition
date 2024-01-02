@@ -1,37 +1,37 @@
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
-Device Jabra Elite Active 75t not available
 Bluetooth connected
-starting emotion file
+Press ON to start emotion recognition
 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-Terminated
+
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ for Python v1.0.0 (linux)
+
+Connecting to blynk.cloud:443...
+Current button value: 0
+Current button value: 1
+Starting emotion recognition
+Neutral
+Emotion uploaded to firebase
+Image saved as captured_images/Neutral_0.jpg
+Surprise
+Emotion uploaded to firebase
+Image saved as captured_images/Surprise_1.jpg
+Neutral
+Emotion uploaded to firebase
+Image saved as captured_images/Neutral_2.jpg
+Current button value: 0
+Stopping emotion recognition...
+Traceback (most recent call last):
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 135, in <module>
+    blynk.run()
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 264, in run
+    self.process(data)
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 197, in process
+    self.emit("V"+args[1], args[2:])
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/virtualenv/lib/python3.11/site-packages/BlynkLib.py", line 68, in emit
+    self._cbks[evt](*a, **kv)
+  File "/home/marty/assignment/raspberry-pi-emotion-recognition/01_emotion_recognition_all_features.py", line 67, in write_handler
+    time.sleep(5)
+KeyboardInterrupt
