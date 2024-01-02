@@ -1,7 +1,6 @@
 # Provides dictionary to convert emotion label to number for Blynk image gallery to 
 # show appropriate emoticon image
 
-
 def emotion_to_number(emotion_label):
     emotion_to_number = {
                     'Angry': 0,

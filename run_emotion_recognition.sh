@@ -1,5 +1,5 @@
 #!/bin/bash
-# This navigates to emotion recogntion project directory, starts virtual environment
+# This navigates to emotion recognition project directory, starts virtual environment
 # and then starts emotion recognition.
 
 # Clear log file
