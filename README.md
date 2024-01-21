@@ -1,6 +1,8 @@
 # raspberry-pi-emotion-recognition
 Project Name: The "How's it going?" Hat - Using a Raspberry Pi with camera for emotion recognition
 
+Grade: 86%
+
 **Introduction**
 
 My partner is autistic and often has trouble interpreting emotion. The purpose of this project is to develop a device that can interpret emotion in real-time via a camera and communicate those emotions with the user. The device is aimed at users who have trouble recognising facial expressions. 
