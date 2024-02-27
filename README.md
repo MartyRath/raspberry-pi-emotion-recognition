@@ -10,7 +10,9 @@ My partner is autistic and often has trouble interpreting emotion. The purpose o
 
 **Result**
 
-See the video walkthrough here: https://www.youtube.com/watch?v=JRKy4CD8RQc
+
+See the full video walkthrough here: 
+[![Watch the video](https://img.youtube.com/vi/JRKy4CD8RQc/maxresdefault.jpg)](https://www.youtube.com/watch?v=JRKy4CD8RQc)
 
 The device recognises seven emotions which are communicated with the user when an emotion changes via connected Bluetooth device and visually via Blynk app. An image is also stored and processed when an emotion changes to be stored via Firebase to create a dataset to train future models. 
 
